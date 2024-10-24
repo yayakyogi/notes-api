@@ -8,8 +8,8 @@ const port = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
-app.use("/types", typeRoute);
-app.use("/notes", noteRoute);
+app.use("/api/types", typeRoute);
+app.use("/api/notes", noteRoute);
 
 app.get("/", (req: Request, res: Response) => {
   res.send("Hello typescript");
